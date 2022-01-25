@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+var openTime = [ {open : 6, close : 20},
+                 { open: 6, close : 22 },
+                 { open: 6, close : 22 },
+                 { open: 6, close : 22 },
+                 { open: 6, close : 22 }, 
+                 { open: 6, close : 24 },
+                 { open: 6, close : 24 }
+              ]
+</script>
+</head>
+
+<body>
+<script>
+var current = new Date();
+var day = current.getDay();
+var currentTime = current.getHours() + (current.getMinutes ()/60) ;
+var remainTime = 0;
+if (openTime[day].open >= 0 && openTime[day].open < currentTime && openTime[day].close > currentTime) {
+         remainTime= (openTime[day].close  - currentTime ).toFixed(2)
+}
+document.write("Ennyi idő van zárásig: ", remainTime);
+				
+					</script>
+</body>
+</html
